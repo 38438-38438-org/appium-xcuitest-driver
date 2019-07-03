@@ -19,7 +19,7 @@ let DEFAULT_CAPS = _.defaults({
   nativeWebTap: true,
 }, SAFARI_CAPS);
 
-describe('Safari - basics -', function () {
+describe.only('Safari - basics -', function () {
   this.timeout(MOCHA_TIMEOUT);
 
   let driver;
@@ -29,7 +29,7 @@ describe('Safari - basics -', function () {
       await deleteSession();
     });
 
-    it('should start a session with default init', async function () {
+    it.only('should start a session with default init', async function () {
       const expectedTitle = process.env.REAL_DEVICE
         ? 'Appium: Mobile App Automation Made Awesome.'
         : 'Appium/welcome';
